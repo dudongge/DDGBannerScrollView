@@ -15,16 +15,16 @@
 		F7707DE321E3551100224279 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707DE221E3551100224279 /* main.m */; };
 		F7707DED21E3551100224279 /* DDGBannerScrollViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707DEC21E3551100224279 /* DDGBannerScrollViewDemoTests.m */; };
 		F7707DF821E3551100224279 /* DDGBannerScrollViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707DF721E3551100224279 /* DDGBannerScrollViewDemoUITests.m */; };
-		F7707E1B21E3553700224279 /* DDGAnimationPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E0821E3553600224279 /* DDGAnimationPageControl.m */; };
-		F7707E1C21E3553700224279 /* DDGAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E0C21E3553600224279 /* DDGAnimatedDotView.m */; };
-		F7707E1D21E3553700224279 /* DDGPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E0E21E3553600224279 /* DDGPageControl.m */; };
-		F7707E1E21E3553700224279 /* DDGAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E0F21E3553600224279 /* DDGAbstractDotView.m */; };
-		F7707E1F21E3553700224279 /* DDGHorizontalPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E1021E3553600224279 /* DDGHorizontalPageControl.m */; };
-		F7707E2021E3553700224279 /* DDGDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E1221E3553600224279 /* DDGDotView.m */; };
-		F7707E2121E3553700224279 /* UIColor+MyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E1321E3553600224279 /* UIColor+MyExtension.m */; };
-		F7707E2221E3553700224279 /* UIView+DDGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E1421E3553600224279 /* UIView+DDGExtension.m */; };
-		F7707E2321E3553700224279 /* DDGBannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E1521E3553600224279 /* DDGBannerScrollView.m */; };
-		F7707E2421E3553700224279 /* DDGCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E1621E3553600224279 /* DDGCollectionViewCell.m */; };
+		F7707E3A21E36A0000224279 /* DDGAnimationPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E2721E36A0000224279 /* DDGAnimationPageControl.m */; };
+		F7707E3B21E36A0000224279 /* UIColor+MyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E2821E36A0000224279 /* UIColor+MyExtension.m */; };
+		F7707E3C21E36A0000224279 /* UIView+DDGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E2B21E36A0000224279 /* UIView+DDGExtension.m */; };
+		F7707E3D21E36A0000224279 /* DDGBannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E2C21E36A0000224279 /* DDGBannerScrollView.m */; };
+		F7707E3E21E36A0000224279 /* DDGCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E2E21E36A0000224279 /* DDGCollectionViewCell.m */; };
+		F7707E3F21E36A0000224279 /* DDGAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E2F21E36A0000224279 /* DDGAnimatedDotView.m */; };
+		F7707E4021E36A0000224279 /* DDGPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E3121E36A0000224279 /* DDGPageControl.m */; };
+		F7707E4121E36A0000224279 /* DDGAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E3221E36A0000224279 /* DDGAbstractDotView.m */; };
+		F7707E4221E36A0000224279 /* DDGHorizontalPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E3521E36A0000224279 /* DDGHorizontalPageControl.m */; };
+		F7707E4321E36A0000224279 /* DDGDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7707E3921E36A0000224279 /* DDGDotView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,26 +61,26 @@
 		F7707DF321E3551100224279 /* DDGBannerScrollViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDGBannerScrollViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7707DF721E3551100224279 /* DDGBannerScrollViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDGBannerScrollViewDemoUITests.m; sourceTree = "<group>"; };
 		F7707DF921E3551100224279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7707E0721E3553600224279 /* DDGPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGPageControl.h; sourceTree = "<group>"; };
-		F7707E0821E3553600224279 /* DDGAnimationPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGAnimationPageControl.m; sourceTree = "<group>"; };
-		F7707E0921E3553600224279 /* DDGAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGAbstractDotView.h; sourceTree = "<group>"; };
-		F7707E0A21E3553600224279 /* DDGHorizontalPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGHorizontalPageControl.h; sourceTree = "<group>"; };
-		F7707E0B21E3553600224279 /* DDGDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGDotView.h; sourceTree = "<group>"; };
-		F7707E0C21E3553600224279 /* DDGAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGAnimatedDotView.m; sourceTree = "<group>"; };
-		F7707E0D21E3553600224279 /* DDGAnimationPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGAnimationPageControl.h; sourceTree = "<group>"; };
-		F7707E0E21E3553600224279 /* DDGPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGPageControl.m; sourceTree = "<group>"; };
-		F7707E0F21E3553600224279 /* DDGAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGAbstractDotView.m; sourceTree = "<group>"; };
-		F7707E1021E3553600224279 /* DDGHorizontalPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGHorizontalPageControl.m; sourceTree = "<group>"; };
-		F7707E1121E3553600224279 /* DDGAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGAnimatedDotView.h; sourceTree = "<group>"; };
-		F7707E1221E3553600224279 /* DDGDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGDotView.m; sourceTree = "<group>"; };
-		F7707E1321E3553600224279 /* UIColor+MyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MyExtension.m"; sourceTree = "<group>"; };
-		F7707E1421E3553600224279 /* UIView+DDGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDGExtension.m"; sourceTree = "<group>"; };
-		F7707E1521E3553600224279 /* DDGBannerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGBannerScrollView.m; sourceTree = "<group>"; };
-		F7707E1621E3553600224279 /* DDGCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGCollectionViewCell.m; sourceTree = "<group>"; };
-		F7707E1721E3553600224279 /* UIColor+MyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MyExtension.h"; sourceTree = "<group>"; };
-		F7707E1821E3553600224279 /* UIView+DDGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDGExtension.h"; sourceTree = "<group>"; };
-		F7707E1921E3553600224279 /* DDGCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGCollectionViewCell.h; sourceTree = "<group>"; };
-		F7707E1A21E3553600224279 /* DDGBannerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGBannerScrollView.h; sourceTree = "<group>"; };
+		F7707E2621E36A0000224279 /* DDGPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGPageControl.h; sourceTree = "<group>"; };
+		F7707E2721E36A0000224279 /* DDGAnimationPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGAnimationPageControl.m; sourceTree = "<group>"; };
+		F7707E2821E36A0000224279 /* UIColor+MyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MyExtension.m"; sourceTree = "<group>"; };
+		F7707E2921E36A0000224279 /* DDGAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGAbstractDotView.h; sourceTree = "<group>"; };
+		F7707E2A21E36A0000224279 /* DDGHorizontalPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGHorizontalPageControl.h; sourceTree = "<group>"; };
+		F7707E2B21E36A0000224279 /* UIView+DDGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDGExtension.m"; sourceTree = "<group>"; };
+		F7707E2C21E36A0000224279 /* DDGBannerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGBannerScrollView.m; sourceTree = "<group>"; };
+		F7707E2D21E36A0000224279 /* DDGDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGDotView.h; sourceTree = "<group>"; };
+		F7707E2E21E36A0000224279 /* DDGCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGCollectionViewCell.m; sourceTree = "<group>"; };
+		F7707E2F21E36A0000224279 /* DDGAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGAnimatedDotView.m; sourceTree = "<group>"; };
+		F7707E3021E36A0000224279 /* DDGAnimationPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGAnimationPageControl.h; sourceTree = "<group>"; };
+		F7707E3121E36A0000224279 /* DDGPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGPageControl.m; sourceTree = "<group>"; };
+		F7707E3221E36A0000224279 /* DDGAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGAbstractDotView.m; sourceTree = "<group>"; };
+		F7707E3321E36A0000224279 /* UIColor+MyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MyExtension.h"; sourceTree = "<group>"; };
+		F7707E3421E36A0000224279 /* UIView+DDGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDGExtension.h"; sourceTree = "<group>"; };
+		F7707E3521E36A0000224279 /* DDGHorizontalPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGHorizontalPageControl.m; sourceTree = "<group>"; };
+		F7707E3621E36A0000224279 /* DDGAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGAnimatedDotView.h; sourceTree = "<group>"; };
+		F7707E3721E36A0000224279 /* DDGCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGCollectionViewCell.h; sourceTree = "<group>"; };
+		F7707E3821E36A0000224279 /* DDGBannerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGBannerScrollView.h; sourceTree = "<group>"; };
+		F7707E3921E36A0000224279 /* DDGDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGDotView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 		F7707DD221E3550E00224279 /* DDGBannerScrollViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F7707E0521E3553600224279 /* DDGBannerScrollView */,
+				F7707E2521E36A0000224279 /* DDGBannerScrollView */,
 				F7707DD321E3550E00224279 /* AppDelegate.h */,
 				F7707DD421E3550E00224279 /* AppDelegate.m */,
 				F7707DD621E3550E00224279 /* ViewController.h */,
@@ -163,41 +163,32 @@
 			path = DDGBannerScrollViewDemoUITests;
 			sourceTree = "<group>";
 		};
-		F7707E0521E3553600224279 /* DDGBannerScrollView */ = {
+		F7707E2521E36A0000224279 /* DDGBannerScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				F7707E0621E3553600224279 /* DDGPageControl */,
-				F7707E1321E3553600224279 /* UIColor+MyExtension.m */,
-				F7707E1421E3553600224279 /* UIView+DDGExtension.m */,
-				F7707E1521E3553600224279 /* DDGBannerScrollView.m */,
-				F7707E1621E3553600224279 /* DDGCollectionViewCell.m */,
-				F7707E1721E3553600224279 /* UIColor+MyExtension.h */,
-				F7707E1821E3553600224279 /* UIView+DDGExtension.h */,
-				F7707E1921E3553600224279 /* DDGCollectionViewCell.h */,
-				F7707E1A21E3553600224279 /* DDGBannerScrollView.h */,
+				F7707E2621E36A0000224279 /* DDGPageControl.h */,
+				F7707E2721E36A0000224279 /* DDGAnimationPageControl.m */,
+				F7707E2821E36A0000224279 /* UIColor+MyExtension.m */,
+				F7707E2921E36A0000224279 /* DDGAbstractDotView.h */,
+				F7707E2A21E36A0000224279 /* DDGHorizontalPageControl.h */,
+				F7707E2B21E36A0000224279 /* UIView+DDGExtension.m */,
+				F7707E2C21E36A0000224279 /* DDGBannerScrollView.m */,
+				F7707E2D21E36A0000224279 /* DDGDotView.h */,
+				F7707E2E21E36A0000224279 /* DDGCollectionViewCell.m */,
+				F7707E2F21E36A0000224279 /* DDGAnimatedDotView.m */,
+				F7707E3021E36A0000224279 /* DDGAnimationPageControl.h */,
+				F7707E3121E36A0000224279 /* DDGPageControl.m */,
+				F7707E3221E36A0000224279 /* DDGAbstractDotView.m */,
+				F7707E3321E36A0000224279 /* UIColor+MyExtension.h */,
+				F7707E3421E36A0000224279 /* UIView+DDGExtension.h */,
+				F7707E3521E36A0000224279 /* DDGHorizontalPageControl.m */,
+				F7707E3621E36A0000224279 /* DDGAnimatedDotView.h */,
+				F7707E3721E36A0000224279 /* DDGCollectionViewCell.h */,
+				F7707E3821E36A0000224279 /* DDGBannerScrollView.h */,
+				F7707E3921E36A0000224279 /* DDGDotView.m */,
 			);
-			name = DDGBannerScrollView;
-			path = ../../../GitHub/MyApp/MyApp/Test/TestView/DDGBannerScrollView;
-			sourceTree = "<group>";
-		};
-		F7707E0621E3553600224279 /* DDGPageControl */ = {
-			isa = PBXGroup;
-			children = (
-				F7707E0721E3553600224279 /* DDGPageControl.h */,
-				F7707E0821E3553600224279 /* DDGAnimationPageControl.m */,
-				F7707E0921E3553600224279 /* DDGAbstractDotView.h */,
-				F7707E0A21E3553600224279 /* DDGHorizontalPageControl.h */,
-				F7707E0B21E3553600224279 /* DDGDotView.h */,
-				F7707E0C21E3553600224279 /* DDGAnimatedDotView.m */,
-				F7707E0D21E3553600224279 /* DDGAnimationPageControl.h */,
-				F7707E0E21E3553600224279 /* DDGPageControl.m */,
-				F7707E0F21E3553600224279 /* DDGAbstractDotView.m */,
-				F7707E1021E3553600224279 /* DDGHorizontalPageControl.m */,
-				F7707E1121E3553600224279 /* DDGAnimatedDotView.h */,
-				F7707E1221E3553600224279 /* DDGDotView.m */,
-			);
-			path = DDGPageControl;
-			sourceTree = "<group>";
+			path = DDGBannerScrollView;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -329,17 +320,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7707E1D21E3553700224279 /* DDGPageControl.m in Sources */,
-				F7707E2421E3553700224279 /* DDGCollectionViewCell.m in Sources */,
+				F7707E4021E36A0000224279 /* DDGPageControl.m in Sources */,
+				F7707E4121E36A0000224279 /* DDGAbstractDotView.m in Sources */,
+				F7707E3E21E36A0000224279 /* DDGCollectionViewCell.m in Sources */,
+				F7707E3C21E36A0000224279 /* UIView+DDGExtension.m in Sources */,
+				F7707E4221E36A0000224279 /* DDGHorizontalPageControl.m in Sources */,
 				F7707DD821E3550E00224279 /* ViewController.m in Sources */,
-				F7707E1E21E3553700224279 /* DDGAbstractDotView.m in Sources */,
-				F7707E1C21E3553700224279 /* DDGAnimatedDotView.m in Sources */,
-				F7707E2021E3553700224279 /* DDGDotView.m in Sources */,
-				F7707E1F21E3553700224279 /* DDGHorizontalPageControl.m in Sources */,
-				F7707E2221E3553700224279 /* UIView+DDGExtension.m in Sources */,
-				F7707E2321E3553700224279 /* DDGBannerScrollView.m in Sources */,
-				F7707E1B21E3553700224279 /* DDGAnimationPageControl.m in Sources */,
-				F7707E2121E3553700224279 /* UIColor+MyExtension.m in Sources */,
+				F7707E4321E36A0000224279 /* DDGDotView.m in Sources */,
+				F7707E3D21E36A0000224279 /* DDGBannerScrollView.m in Sources */,
+				F7707E3F21E36A0000224279 /* DDGAnimatedDotView.m in Sources */,
+				F7707E3A21E36A0000224279 /* DDGAnimationPageControl.m in Sources */,
+				F7707E3B21E36A0000224279 /* UIColor+MyExtension.m in Sources */,
 				F7707DE321E3551100224279 /* main.m in Sources */,
 				F7707DD521E3550E00224279 /* AppDelegate.m in Sources */,
 			);
