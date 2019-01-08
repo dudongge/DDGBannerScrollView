@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "DDGBannerScrollView"
-  spec.version      = "1.0.0"
+  spec.version      = "0.1.0"
   spec.summary      = "A short description of DDGBannerScrollView."
 
   # This description is used to generate tags and improve search results.
@@ -83,7 +83,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/dudongge/DDGbannerScrollView", :tag => "0.1.0" }
+  spec.source       = { :git => "https://github.com/dudongge/DDGbannerScrollView.git", :tag => "0.1.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -93,7 +93,7 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #"DDGScreenShot/DDGScreenShot/",
-  s.source_files  = "DDGbannerScrollView/","Classes/**/*.{h,m}"
+  s.source_files  = "DDGbannerScrollView","Classes/**/*.{h,m}"
   
 
   # spec.public_header_files = "Classes/**/*.h"
