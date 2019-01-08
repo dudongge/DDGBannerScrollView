@@ -92,7 +92,7 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #"DDGScreenShot/DDGScreenShot/",
-  s.source_files  = "DDGbannerScrollView/DDGbannerScrollView/","Classes/**/*.{h,m}"
+  s.source_files  = "DDGbannerScrollView/","Classes/**/*.{h,m}"
   
 
   # spec.public_header_files = "Classes/**/*.h"
