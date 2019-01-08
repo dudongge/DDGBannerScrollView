@@ -7,7 +7,7 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
-Pod::Spec.new do |spec|
+Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -16,22 +16,21 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "DDGBannerScrollView"
-  spec.version      = "0.1.0"
-  spec.summary      = "A short description of DDGBannerScrollView."
+  s.name         = "DDGBannerScrollView"
+  s.version      = "0.1.0"
+  s.summary      = "A short description of DDGBannerScrollView"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
+  s.description  = <<-DESC
                    无限图片轮播功能,每个图片的相对偏移量，方便开发者自己封装东西
                    pageControl的几个动画，（旋转，跳跃等慢慢会增加）
-                   
                    DESC
 
-  spec.homepage     = "https://github.com/dudongge/DDGBannerScrollView/tree/master"
+  s.homepage     = "https://github.com/dudongge/DDGBannerScrollView/tree/master"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -42,7 +41,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT"
+  s.license      = "MIT"
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -56,7 +55,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "dudongge" => "532835032@qq.com" }
+  s.author             = { "dudongge" => "532835032@qq.com" }
   # Or just: spec.author    = "dudongge"
   # spec.authors            = { "dudongge" => "532835032@qq.com" }
   # spec.social_media_url   = "https://twitter.com/dudongge"
@@ -67,8 +66,8 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  spec.platform     = :ios
-  spec.platform     = :ios, "9.0"
+  s.platform     = :ios
+  s.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -83,7 +82,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/dudongge/DDGbannerScrollView.git", :tag => "0.1.0" }
+  s.source      = { :git => "https://github.com/dudongge/DDGbannerScrollView.git", :tag => "0.1.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -92,8 +91,7 @@ Pod::Spec.new do |spec|
   #  giving a folder will include any swift, h, m, mm, c & cpp files.
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
-  #"DDGScreenShot/DDGScreenShot/",
-  s.source_files  = "DDGbannerScrollView","Classes/**/*.{h,m}"
+  s.source_files  = "DDGbannerScrollView/*.{h,m}"
   
 
   # spec.public_header_files = "Classes/**/*.h"
