@@ -1,3 +1,4 @@
+
 #
 #  Be sure to run `pod spec lint DDGBannerScrollView.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
@@ -82,7 +83,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/dudongge/DDGbannerScrollView/tree/master/DDGBannerScrollView", :tag => "1.0.0" }
+  spec.source       = { :git => "https://github.com/dudongge/DDGbannerScrollView", :tag => "0.1.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,8 +92,8 @@ Pod::Spec.new do |spec|
   #  giving a folder will include any swift, h, m, mm, c & cpp files.
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
-  #
-  s.source_files  = "Classes/**/*.{h,m}"
+  #"DDGScreenShot/DDGScreenShot/",
+  s.source_files  = "DDGbannerScrollView/","Classes/**/*.{h,m}"
   
 
   # spec.public_header_files = "Classes/**/*.h"
