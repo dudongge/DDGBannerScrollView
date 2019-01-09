@@ -27,7 +27,7 @@
 ## 模块分解
 ####  图片轮播器
  ```
- 图片轮播器（UICollectionView + 定时器），这个参考了知名的第三方库[SDCycleScrollView](https://github.com/dudongge/DDGScreenShot)
+ 图片轮播器（UICollectionView + 定时器），这个参考了知名的第三方库SDCycleScrollView，文末附有链接
  所以在性能和稳定性上有了保证，在此表示感谢。
  ```
 ####  两种颜色的线性渐变
@@ -125,4 +125,4 @@
 ```
 
 ## 写在最后
- 最后，再次感谢下[SDCycleScrollView](https://github.com/dudongge/DDGScreenShot)的作者，也感谢大家的关心和支持，如果对你有帮助，希望你不吝✨star一下。
+ 最后，再次感谢下[SDCycleScrollView](https://github.com/gsdios/SDCycleScrollView)的作者，也感谢大家的关心和支持，如果对你有帮助，希望你不吝✨star一下。
