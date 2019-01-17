@@ -61,14 +61,7 @@
     self.jumpBannerScrollView.pageControlStyle = DDGBannerScrollViewPageImageJump;
     self.jumpBannerScrollView.pageDotImage = [UIImage imageNamed:@"page_normal"];
     self.jumpBannerScrollView.currentPageDotImage = [UIImage imageNamed:@"page_current"];
-    
-   // [self.view addSubview: self.bgRotationView];
-    //[self.bgRotationView addSubview: self.horizontalPageControl];
-    //[self.bgRotationView addSubview: self.animationPageControl];
-    
-    //[self.bgRotationView addSubview: self.myAnimationJumpControl];
-    //    [self.bgRotationView addSubview: self.myAnimationRotationControl];
-    
+  
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (!self) return;
        

@@ -123,6 +123,60 @@
 1，下载本demo，直接将DDGBannerScrollView文件夹下的文件拖入即可，详细使用见demo和源码
 2，pod 'DDGBannerScrollView'
 ```
+### 简单代码
+```
+//头部banner图片
+@property (nonatomic, strong) DDGBannerScrollView *bannerScrollView;
+//头部banner背景图片
+@property (nonatomic, strong) UIView *bgHeaderView;
+- (UIView *)bgHeaderView {
+if (!_bgHeaderView) {
+_bgHeaderView = [[UIView alloc]init];
+_bgHeaderView.frame = CGRectMake(0,0, screen_width , screen_width * 0.37 + 120);
+}
+return _bgHeaderView;
+}
+
+- (DDGBannerScrollView *)bannerScrollView {
+if (!_bannerScrollView) {
+CGRect frame = CGRectMake(30, 88, self.view.frame.size.width - 60, screen_width * 0.37);
+_bannerScrollView = [DDGBannerScrollView cycleScrollViewWithFrame:frame delegate:self placeholderImage:[UIImage imageNamed:@"cache_cancel_all"]];
+_bannerScrollView.imageURLStringsGroup = @[@"3",@"1",@"2",@"1",@"3"];
+}
+return _bannerScrollView;
+}
+
+[self.bgHeaderView addSubview:self.bannerScrollView];
+self.bannerScrollView.pageControlAliment = DDGBannerScrollViewPageContolAlimentRight;
+self.bannerScrollView.pageControlStyle = DDGBannerScrollViewPageControlHorizontal;
+self.bannerScrollView.pageDotColor = UIColor.greenColor;
+self.bannerScrollView.currentPageDotColor = UIColor.redColor;
+
+//根据偏移量计算设置banner背景颜色
+- (void)handelBannerBgColorWithOffset:(NSInteger )offset {
+if (1 == self.changeColors.count) return;
+NSInteger offsetCurrent = offset % (int)self.bannerScrollView.bounds.size.width ;
+float rate = offsetCurrent / self.bannerScrollView.bounds.size.width ;
+NSInteger currentPage = offset / (int)self.bannerScrollView.bounds.size.width;
+UIColor *startPageColor;
+UIColor *endPageColor;
+if (currentPage == self.changeColors.count - 1) {
+startPageColor = self.changeColors[currentPage];
+endPageColor = self.changeColors[0];
+} else {
+if (currentPage  == self.changeColors.count) {
+return;
+}
+startPageColor = self.changeColors[currentPage];
+endPageColor = self.changeColors[currentPage + 1];
+}
+UIColor *currentToLastColor = [UIColor getColorWithColor:startPageColor andCoe:rate andEndColor:endPageColor];
+self.bgHeaderView.backgroundColor = currentToLastColor;
+}
+```
+
+
+
 
 ## 写在最后
  最后，再次感谢下[SDCycleScrollView](https://github.com/gsdios/SDCycleScrollView)的作者，也感谢大家的关心和支持，如果对你有帮助，希望你不吝✨star一下。
