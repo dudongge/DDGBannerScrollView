@@ -20,11 +20,14 @@
 
 @property (nonatomic, strong) DDGBannerScrollView *bannerScrollView;
 @property (nonatomic, strong) DDGBannerScrollView *midBannerScrollView;
+@property (nonatomic, strong) DDGBannerScrollView *jumpBannerScrollView;
 @property (nonatomic, strong) UIView *bgHeaderView;
 @property (nonatomic, strong) UIView *midHeaderView;
+@property (nonatomic, strong) UIView *jumpHeaderView;
 @property (nonatomic, strong) UIView *bgRotationView;
 @property (nonatomic, strong) NSMutableArray *changeColors;
 @property (nonatomic, strong) NSMutableArray *midChangeColors;
+@property (nonatomic, strong) NSMutableArray *jumpChangeColors;
 @property (nonatomic, strong) DDGHorizontalPageControl *horizontalPageControl;
 @property (nonatomic, strong) DDGAnimationPageControl *animationPageControl;
 @property (nonatomic, strong) DDGAnimationPageControl *myAnimationJumpControl;
@@ -35,7 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view addSubview: self.bgRotationView];
+    
     
     [self.view addSubview:self.bgHeaderView];
     [self.bgHeaderView addSubview:self.bannerScrollView];
@@ -44,10 +47,23 @@
     self.bannerScrollView.pageDotColor = UIColor.greenColor;
     self.bannerScrollView.currentPageDotColor = UIColor.redColor;
     
+    [self.view addSubview:self.midHeaderView];
+    [self.midHeaderView addSubview: self.midBannerScrollView];
+    self.midBannerScrollView.pageControlAliment = DDGBannerScrollViewPageContolAlimentRight;
+    self.midBannerScrollView.pageControlStyle = DDGBannerScrollViewPageImageAnimated;
+    self.midBannerScrollView.pageDotImage = [UIImage imageNamed:@"page_normal"];
+    self.midBannerScrollView.currentPageDotImage = [UIImage imageNamed:@"page_current"];
     
     
+    [self.view addSubview:self.jumpHeaderView];
+    [self.jumpHeaderView addSubview: self.jumpBannerScrollView];
+    self.jumpBannerScrollView.pageControlAliment = DDGBannerScrollViewPageContolAlimentRight;
+    self.jumpBannerScrollView.pageControlStyle = DDGBannerScrollViewPageImageJump;
+    self.jumpBannerScrollView.pageDotImage = [UIImage imageNamed:@"page_normal"];
+    self.jumpBannerScrollView.currentPageDotImage = [UIImage imageNamed:@"page_current"];
     
-    [self.bgRotationView addSubview: self.horizontalPageControl];
+   // [self.view addSubview: self.bgRotationView];
+    //[self.bgRotationView addSubview: self.horizontalPageControl];
     //[self.bgRotationView addSubview: self.animationPageControl];
     
     //[self.bgRotationView addSubview: self.myAnimationJumpControl];
@@ -55,12 +71,7 @@
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (!self) return;
-        [self.view addSubview:self.midHeaderView];
-        [self.midHeaderView addSubview: self.midBannerScrollView];
-        self.midBannerScrollView.pageControlAliment = DDGBannerScrollViewPageContolAlimentRight;
-        self.midBannerScrollView.pageControlStyle = DDGBannerScrollViewPageImageAnimated;
-        self.midBannerScrollView.pageDotImage = [UIImage imageNamed:@"page_normal"];
-        self.midBannerScrollView.currentPageDotImage = [UIImage imageNamed:@"page_current"];
+       
     });
     
     
@@ -72,6 +83,11 @@
     self.midBannerScrollView.cycleScrollViewBlock = ^(NSInteger offset) {
         [weakSelf handelMidBannerBgColorWithOffset:offset];
     };
+    
+    self.jumpBannerScrollView.cycleScrollViewBlock = ^(NSInteger offset) {
+        [weakSelf handelJunpBannerBgColorWithOffset:offset];
+    };
+    
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -138,11 +154,33 @@
     self.midHeaderView.backgroundColor = midCurrentToLastColor;
 }
 
+//根据偏移量计算设置banner背景颜色
+- (void)handelJunpBannerBgColorWithOffset:(NSInteger )offset {
+    if (1 == self.jumpChangeColors.count) return;
+    NSInteger offsetCurrent = offset % (int)self.jumpBannerScrollView.bounds.size.width ;
+    float rate = offsetCurrent / self.jumpBannerScrollView.bounds.size.width ;
+    NSInteger currentPage = offset / (int)self.jumpBannerScrollView.bounds.size.width;
+    UIColor *midStartPageColor;
+    UIColor *midEndPageColor;
+    if (currentPage == self.jumpChangeColors.count - 1) {
+        midStartPageColor = self.jumpChangeColors[currentPage];
+        midEndPageColor = self.jumpChangeColors[0];
+    } else {
+        if (currentPage  == self.jumpChangeColors.count) {
+            return;
+        }
+        midStartPageColor = self.jumpChangeColors[currentPage];
+        midEndPageColor = self.jumpChangeColors[currentPage + 1];
+    }
+    UIColor *midCurrentToLastColor = [UIColor getColorWithColor:midStartPageColor andCoe:rate andEndColor:midEndPageColor];
+    self.jumpHeaderView.backgroundColor = midCurrentToLastColor;
+}
+
 - (DDGBannerScrollView *)bannerScrollView {
     if (!_bannerScrollView) {
         CGRect frame = CGRectMake(30, 88, self.view.frame.size.width - 60, screen_width * 0.37);
         _bannerScrollView = [DDGBannerScrollView cycleScrollViewWithFrame:frame delegate:self placeholderImage:[UIImage imageNamed:@"cache_cancel_all"]];
-        _bannerScrollView.imageURLStringsGroup = @[@"0",@"1",@"2",@"1",@"2"];
+        _bannerScrollView.imageURLStringsGroup = @[@"3",@"1",@"2",@"1",@"3"];
     }
     return _bannerScrollView;
 }
@@ -152,9 +190,18 @@
         
         CGRect frame = CGRectMake(30, 88, screen_width - 60, screen_width * 0.37);
         _midBannerScrollView = [DDGBannerScrollView cycleScrollViewWithFrame:frame delegate:self placeholderImage:[UIImage imageNamed:@"cache_cancel_all"]];
-        _midBannerScrollView.imageURLStringsGroup = @[@"2",@"0",@"1",@"12",@"11"];
+        _midBannerScrollView.imageURLStringsGroup = @[@"2",@"3",@"1",@"3",@"1"];
     }
     return _midBannerScrollView;
+}
+- (DDGBannerScrollView *)jumpBannerScrollView {
+    if (!_jumpBannerScrollView) {
+        
+        CGRect frame = CGRectMake(30, 88, screen_width - 60, screen_width * 0.37);
+        _jumpBannerScrollView = [DDGBannerScrollView cycleScrollViewWithFrame:frame delegate:self placeholderImage:[UIImage imageNamed:@"cache_cancel_all"]];
+        _jumpBannerScrollView.imageURLStringsGroup = @[@"1",@"2",@"3",@"2",@"1"];
+    }
+    return _jumpBannerScrollView;
 }
 
 - (UIView *)bgHeaderView {
@@ -171,6 +218,14 @@
         _midHeaderView.frame = CGRectMake(0,screen_width * 0.37 + 130, screen_width, screen_width * 0.37 + 120);
     }
     return _midHeaderView;
+}
+
+- (UIView *)jumpHeaderView {
+    if (!_jumpHeaderView) {
+        _jumpHeaderView = [[UIView alloc]init];
+        _jumpHeaderView.frame = CGRectMake(0,(screen_width * 0.37 + 130) * 2, screen_width, screen_width * 0.37 + 120);
+    }
+    return _jumpHeaderView;
 }
 
 - (NSMutableArray *)changeColors {
@@ -195,6 +250,17 @@
         _midChangeColors = [[NSMutableArray alloc]initWithArray:@[oneColor,twoColor,threeColor,fourColor,fiveColor]];
     }
     return _midChangeColors;
+}
+- (NSMutableArray *)jumpChangeColors {
+    if (!_jumpChangeColors) {
+        UIColor *oneColor   = [UIColor colorWithHexString:@"#1D184C" alpha:1.0];
+        UIColor *twoColor   = [UIColor colorWithHexString:@"#35C1FF" alpha:1.0];
+        UIColor *threeColor = [UIColor colorWithHexString:@"#242F32" alpha:1.0];
+        UIColor *fourColor  = [UIColor colorWithHexString:@"#4BC31F" alpha:1.0];
+        UIColor *fiveColor  = [UIColor colorWithHexString:@"#383BA2" alpha:1.0];
+        _jumpChangeColors = [[NSMutableArray alloc]initWithArray:@[oneColor,twoColor,threeColor,fourColor,fiveColor]];
+    }
+    return _jumpChangeColors;
 }
 
 - (DDGHorizontalPageControl *)horizontalPageControl {

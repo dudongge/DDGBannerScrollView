@@ -19,7 +19,7 @@
  3、简单的旋转动画（frame动画 CABasicAnimation）
  4、简单的贝塞尔曲线（半圆）与动画的组合（UIBezierPath + CAKeyframeAnimation）
 ```
-## 来看看效果
+## 来看看效果(虽然效果不太明显)
 ![image](https://raw.githubusercontent.com/dudongge/DDGbannerScrollView/master/gif/page0.gif)
 ![image](https://raw.githubusercontent.com/dudongge/DDGbannerScrollView/master/gif/page1.gif)!
 
@@ -27,7 +27,7 @@
 ## 模块分解
 ####  图片轮播器
  ```
- 图片轮播器（UICollectionView + 定时器），这个参考了知名的第三方库SDCycleScrollView，文末附有链接
+ 图片轮播器（UICollectionView + 定时器），这个参考了知名的第三方库SDCycleScrollView，并在此基础上做了修改，文末附有链接
  所以在性能和稳定性上有了保证，在此表示感谢。
  ```
 ####  两种颜色的线性渐变
@@ -121,7 +121,7 @@
 ## 如何使用
 ```
 1，下载本demo，直接将DDGBannerScrollView文件夹下的文件拖入即可，详细使用见demo和源码
-2，pod (敬请期待)
+2，pod 'DDGBannerScrollView'
 ```
 
 ## 写在最后

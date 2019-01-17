@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/dudongge/DDGBannerScrollView.git", :tag => "0.1.1" }
-  #s.source_files = "DDGBannerScrollView/*.{h,m}"
-  s.source_files = "DDGBannerScrollView/DDGBannerScrollView/**/*.{h,m}"
+  s.source_files = "DDGBannerScrollView/*.{h,m}"
+  #s.source_files = "DDGBannerScrollView/DDGBannerScrollView/**/*.{h,m}"
 
 end
