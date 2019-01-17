@@ -621,7 +621,7 @@ NSString * const ID = @"DDGBannerScrollViewCell";
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat totalImagewidth = self.bounds.size.width * self.imagePathsGroup.count;
-    CGFloat currentOffset = _mainView.contentOffset.x - self.bounds.size.width * 100;
+    CGFloat currentOffset = _mainView.contentOffset.x - self.bounds.size.width * 50 * self.imagePathsGroup.count;
     CGFloat realOffset;
     if (currentOffset > 0) {
         realOffset = (int)currentOffset % (int)totalImagewidth;

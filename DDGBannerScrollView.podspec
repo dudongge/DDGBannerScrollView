@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DDGBannerScrollView"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "A short description of DDGBannerScrollView"
   
 
@@ -19,8 +19,8 @@ Pod::Spec.new do |s|
   s.author       = { "dudongge" => "532835032@qq.com" }
   s.platform     = :ios
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/dudongge/DDGBannerScrollView.git", :tag => "0.1.0" }
+  s.source       = { :git => "https://github.com/dudongge/DDGBannerScrollView.git", :tag => "0.1.1" }
   #s.source_files = "DDGBannerScrollView/*.{h,m}"
-  s.source_files = "DDGBannerScrollView/**/*.{h,m}"
+  s.source_files = "DDGBannerScrollView/DDGBannerScrollView/**/*.{h,m}"
 
 end
