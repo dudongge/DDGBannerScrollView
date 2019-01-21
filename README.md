@@ -79,19 +79,19 @@ DDGBannerScrollView 用到的知识
 @param clockwise 旋转的方向（正向还是逆向）
 */
 - (void)startrRotationImageView:(UIImageView *)imageView duration:(CGFloat)duration clockwise:(BOOL)clockwise {
-CABasicAnimation* rotationAnimation;
-//动画的方式，绕着z轴
-rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-//旋转的弧度
-rotationAnimation.toValue = [NSNumber numberWithFloat: clockwise ? M_PI * 2.0 : -M_PI * 2.0 ];
-//动画持续的时间
-rotationAnimation.duration = duration;
-//动画角度值是否累加（默认为NO）
-rotationAnimation.cumulative = NO;
-//重复次数
-rotationAnimation.repeatCount = 1;
-//动画添加到layer上
-[imageView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
+    CABasicAnimation* rotationAnimation;
+    //动画的方式，绕着z轴
+    rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    //旋转的弧度
+    rotationAnimation.toValue = [NSNumber numberWithFloat: clockwise ? M_PI * 2.0 : -M_PI * 2.0 ];
+    //动画持续的时间
+    rotationAnimation.duration = duration;
+    //动画角度值是否累加（默认为NO）
+    rotationAnimation.cumulative = NO;
+    //重复次数
+    rotationAnimation.repeatCount = 1;
+    //动画添加到layer上
+    [imageView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
 }
 
 /**
@@ -103,21 +103,21 @@ rotationAnimation.repeatCount = 1;
 @param clockwise 旋转方向（正向还是逆向）
 */
 - (void)startrRotationImageView:(UIImageView *)imageView duration:(CGFloat)duration controlPoint:(CGPoint)controlPoint clockwise:(BOOL)clockwise {
-CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
-//设置动画属性，因为是沿着贝塞尔曲线动，所以要设置为position
-animation.keyPath = @"position";
-//设置动画时间
-animation.duration = duration;
-// 告诉在动画结束的时候不要移除
-animation.removedOnCompletion = YES;
-// 始终保持最新的效果
-//animation.fillMode = kCAFillModeForwards;
-//贝塞尔曲线
-UIBezierPath *circlePath = [UIBezierPath bezierPathWithArcCenter:controlPoint radius:((_dotMargin + _dotNomalSize.width ) /2.0) startAngle: clockwise ? M_PI : 0 endAngle: clockwise ? 0 : M_PI clockwise: clockwise];
-// 设置贝塞尔曲线路径
-animation.path = circlePath.CGPath;
-// 将动画对象添加到视图的layer上
-[imageView.layer addAnimation:animation forKey:@"position"];
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+    //设置动画属性，因为是沿着贝塞尔曲线动，所以要设置为position
+    animation.keyPath = @"position";
+    //设置动画时间
+    animation.duration = duration;
+    // 告诉在动画结束的时候不要移除
+    animation.removedOnCompletion = YES;
+    // 始终保持最新的效果
+    //animation.fillMode = kCAFillModeForwards;
+    //贝塞尔曲线
+    UIBezierPath *circlePath = [UIBezierPath bezierPathWithArcCenter:controlPoint radius:((_dotMargin + _dotNomalSize.width ) /2.0) startAngle: clockwise ? M_PI : 0 endAngle: clockwise ? 0 : M_PI clockwise: clockwise];
+    // 设置贝塞尔曲线路径
+    animation.path = circlePath.CGPath;
+    // 将动画对象添加到视图的layer上
+    [imageView.layer addAnimation:animation forKey:@"position"];
 }
 
 ```
@@ -133,20 +133,20 @@ animation.path = circlePath.CGPath;
 //头部banner背景图片
 @property (nonatomic, strong) UIView *bgHeaderView;
 - (UIView *)bgHeaderView {
-if (!_bgHeaderView) {
-_bgHeaderView = [[UIView alloc]init];
-_bgHeaderView.frame = CGRectMake(0,0, screen_width , screen_width * 0.37 + 120);
-}
-return _bgHeaderView;
+    if (!_bgHeaderView) {
+        _bgHeaderView = [[UIView alloc]init];
+        _bgHeaderView.frame = CGRectMake(0,0, screen_width , screen_width * 0.37 + 120);
+    }
+    return _bgHeaderView;
 }
 
 - (DDGBannerScrollView *)bannerScrollView {
-if (!_bannerScrollView) {
-CGRect frame = CGRectMake(30, 88, self.view.frame.size.width - 60, screen_width * 0.37);
-_bannerScrollView = [DDGBannerScrollView cycleScrollViewWithFrame:frame delegate:self placeholderImage:[UIImage imageNamed:@"cache_cancel_all"]];
-_bannerScrollView.imageURLStringsGroup = @[@"3",@"1",@"2",@"1",@"3"];
-}
-return _bannerScrollView;
+    if (!_bannerScrollView) {
+        CGRect frame = CGRectMake(30, 88, self.view.frame.size.width - 60, screen_width * 0.37);
+        _bannerScrollView = [DDGBannerScrollView cycleScrollViewWithFrame:frame delegate:self placeholderImage:[UIImage imageNamed:@"cache_cancel_all"]];
+        _bannerScrollView.imageURLStringsGroup = @[@"3",@"1",@"2",@"1",@"3"];
+    }
+    return _bannerScrollView;
 }
 
 [self.bgHeaderView addSubview:self.bannerScrollView];
@@ -157,24 +157,24 @@ self.bannerScrollView.currentPageDotColor = UIColor.redColor;
 
 //根据偏移量计算设置banner背景颜色
 - (void)handelBannerBgColorWithOffset:(NSInteger )offset {
-if (1 == self.changeColors.count) return;
-NSInteger offsetCurrent = offset % (int)self.bannerScrollView.bounds.size.width ;
-float rate = offsetCurrent / self.bannerScrollView.bounds.size.width ;
-NSInteger currentPage = offset / (int)self.bannerScrollView.bounds.size.width;
-UIColor *startPageColor;
-UIColor *endPageColor;
-if (currentPage == self.changeColors.count - 1) {
-startPageColor = self.changeColors[currentPage];
-endPageColor = self.changeColors[0];
-} else {
-if (currentPage  == self.changeColors.count) {
-return;
-}
-startPageColor = self.changeColors[currentPage];
-endPageColor = self.changeColors[currentPage + 1];
-}
-UIColor *currentToLastColor = [UIColor getColorWithColor:startPageColor andCoe:rate andEndColor:endPageColor];
-self.bgHeaderView.backgroundColor = currentToLastColor;
+    if (1 == self.changeColors.count) return;
+    NSInteger offsetCurrent = offset % (int)self.bannerScrollView.bounds.size.width ;
+    float rate = offsetCurrent / self.bannerScrollView.bounds.size.width ;
+    NSInteger currentPage = offset / (int)self.bannerScrollView.bounds.size.width;
+    UIColor *startPageColor;
+    UIColor *endPageColor;
+    if (currentPage == self.changeColors.count - 1) {
+        startPageColor = self.changeColors[currentPage];
+        endPageColor = self.changeColors[0];
+    } else {
+        if (currentPage  == self.changeColors.count) {
+        return;
+    }
+        startPageColor = self.changeColors[currentPage];
+        endPageColor = self.changeColors[currentPage + 1];
+    }
+    UIColor *currentToLastColor = [UIColor getColorWithColor:startPageColor andCoe:rate andEndColor:endPageColor];
+    self.bgHeaderView.backgroundColor = currentToLastColor;
 }
 ```
 
