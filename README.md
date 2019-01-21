@@ -5,6 +5,7 @@
 像一些知名的app都采用了图片轮播的背景渐变色，举几个栗子：优酷的首页，喜马拉雅，蜻蜓fm，哔哩哔哩漫画等，
 page索引也是玩的很高大上，系统的早已满足不了了需求。
 鉴于此和项目的需要，在前人的基础上，整理了一个这个库，志在简单的几句代码，就能让应用看上去高大上。
+github:[DDGBannerScrollView](https://github.com/dudongge/DDGBannerScrollView)
 ```
 ## DDGBannerScrollView 此库的功能
 
@@ -181,4 +182,10 @@ self.bgHeaderView.backgroundColor = currentToLastColor;
 
 
 ## 写在最后
+奉上github地址:[DDGBannerScrollView](https://github.com/dudongge/DDGBannerScrollView)
+
+掘金地址：[DDGBannerScrollView](https://github.com/dudongge/DDGBannerScrollView)
+
+简书地址：[DDGBannerScrollView](https://www.jianshu.com/p/f490297f445d)
+
 最后，再次感谢下[SDCycleScrollView](https://github.com/gsdios/SDCycleScrollView)的作者，也感谢大家的关心和支持，如果对你有帮助，希望你不吝✨star一下。
